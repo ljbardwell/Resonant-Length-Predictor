@@ -51,7 +51,7 @@ Vs=((E^2)/(abs(k).^2)).*(1+exp(2.*kI.*d)-2.*exp(kI.*d).*cos(kR.*d));
 [Y,I]=max(Vs); 
 
 % Derivative of voltage squared equation
-dVs=((E^2)/abs(k)^2).*(-2.*kI.*exp(-2.*kI.*d)+2.*kI.*exp(-kI.*d).*cos(kR.*d)+2.*kR.*exp(-kI.*d).*sin(kR.*d));
+dVs=(kI.*exp(kI.*d)-kI.*cos(kR.*d)+kR.*sin(kR.*d));
 
 figure; plot(d*100,Vs);ylabel('Voltage Squared(V^2)'); xlabel('Length (cm)'); title('SEM');
 hold on;
