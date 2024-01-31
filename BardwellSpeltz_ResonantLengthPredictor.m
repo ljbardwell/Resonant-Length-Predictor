@@ -8,6 +8,7 @@ clc;
 close all;
 
 fprintf('This resonant length prediction tool is from the following reference: Bardwell Speltz L, Lee SK, Shu Y, Tarasek M, Trzasko J, Foo TK, Bernstein MA. Modeling and measurement of lead tip heating and resonant length for implanted, insulated wires.\n');
+fprintf('WARNING: The King Wavenumber and transmission line model may not be valid for tissues with low conductivity (i.e. fat (cond=0.066 S/m at 1.5T)');
 
 
 w=2*pi()*63.87*10^6; % frequency in rad/s (2*pi*f)(1.5T)
