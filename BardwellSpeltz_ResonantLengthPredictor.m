@@ -8,7 +8,12 @@ clc;
 close all;
 
 fprintf('This resonant length prediction tool is from the following reference: Bardwell Speltz L, Lee SK, Shu Y, Tarasek M, Trzasko J, Foo TK, Bernstein MA. Modeling and measurement of lead tip heating and resonant length for implanted, insulated wires.\n');
-fprintf('WARNING: The King Wavenumber and transmission line model may not be valid for tissues with low conductivity (i.e. fat (cond=0.066 S/m at 1.5T)');
+fprintf('WARNING: The King Wavenumber and transmission line model may be less accurate for tissues with low conductivity (i.e. fat (cond=0.066 S/m at 1.5T) according to Liu et al. and King et al. (references in comments below)');
+
+
+% Liu et al. A Transmission Line Model for the Evaluation of MRI RF-Induced Fields on Active Implantable Medical Devices. IEEE Trans Microw Theory Tec. 2018 Sept;66(9):4271-4281. Doi: 10.1109/TMTT.2018.2851975.
+% King et al. Insulated linear antenna: Theory and experiment. J Appl Phys. 1974 Apr;45(4):1688-97.
+
 
 
 w=2*pi()*63.87*10^6; % frequency in rad/s (2*pi*f)(1.5T)
